@@ -190,6 +190,8 @@
             line-height: 44px;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
 </head>
 
 <body>
@@ -199,35 +201,104 @@
     <!-- <div class="infoLabelMore">…</div> -->
     <!-- </div> -->
 
-    <div class="mainDiv">
+    <div class="mainDiv" id="vueMount">
         <div class="mainDivLeft">
             <div class="avatar">
                 <!-- <img src="D:\OneDrive\Pictures_图片\WHITE KITTEN GIRL(tw) by SAZI\main@2x.png"> -->
-                <img src="./Ayano.jpg">
+                <!-- <img src="./Ayano.jpg"> -->
+                <img v-bind:src="avatarPic">
             </div>
         </div>
         <div class="mainDivRight">
-            <div class="nickName">rabbit2002</div>
+            <div class="nickName">{{nickName}}</div>
             <div class="word">
-                <p>咕咕咕咕咕咕</p>
-                <p>咕咕咕咕1咕</p>
-                <p class="operatonFontColor">12345678910</p>
-                <p>春秋雪夜</p>
+                <p>{{wordArray.College}}</p>
+                <p>{{wordArray.greadAndClass}}</p>
+                <p class="operatonFontColor">{{wordArray.id}}</p>
+                <p>{{wordArray.name}}</p>
             </div>
             <div class="link">
                 <div class="linkPic">
-                    <img src="http://qqadapt.qpic.cn/adapt/0/f86d7317-9560-a7ef-8326-96c1581da40d/">
+                    <img v-bind:src="linkPic">
                 </div>
                 <div class="linkText">
-                    <p>我完成了“青年大学习”网上主题团课第九季第二期，你也来试试吧</p>
+                    <p>{{linkText}}</p>
                 </div>
             </div>
             <div class="timeAndOption">
-                <div class="time">02:21</div>
+                <div class="time">{{time}}</div>
                 <div class="option operatonFontColor">删除</div>
             </div>
         </div>
+
+        <table>
+            <tr>
+                <td>avatarPic</td>
+                <td><input type="text" v-model="avatarPic" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>nickName</td>
+                <td><input type="text" v-model="nickName" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>linkPic</td>
+                <td><input type="text" v-model="linkPic" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>linkText</td>
+                <td><input type="text" v-model="linkText" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td><input type="text" v-model="time" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>College</td>
+                <td><input type="text" v-model="wordArray.College" style="width: 100px;"></td>
+            </tr>
+            <tr>
+                <td>greadAndClass</td>
+                <td><input type="text" v-model="wordArray.greadAndClass" style="width: 100px;"></td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td><input type="number" v-model="wordArray.id" style="width: 100px;"></td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td><input type="text" v-model="wordArray.name" style="width: 100px;"></td>
+            </tr>
+        </table>
+
     </div>
+
+    <script>
+        var vue = new Vue({
+            el: "#vueMount",
+            data() {
+                return {
+                    avatarPic: "https://www.rabbit2002.moe/Ayano.jpg",
+                    nickName: "rabbit2002",
+                    linkPic: "http://qqadapt.qpic.cn/adapt/0/f86d7317-9560-a7ef-8326-96c1581da40d/",
+                    linkText: "我完成了“青年大学习”网上主题团课第九季第二期，你也来试试吧",
+                    time: this.getTime(),
+                    wordArray: {
+                        College: "XXX学校",
+                        greadAndClass: "XXX学院",
+                        id: 12345678910,
+                        name: "XXX",
+                    },
+                }
+            },
+            methods: {
+                getTime() {
+                    var date = new Date();
+                    var time = date.getHours() + ":" + date.getMinutes();
+                    return time;
+                },
+            },
+        })
+    </script>
 
 </body>
 
