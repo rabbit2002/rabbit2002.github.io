@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        /* 全局使用css */
+
+        /* 可操作字体 */
+        .operatonFontColor {
+            color: rgb(90, 100, 140);
+        }
+
+        /* 其他css */
+
+        /* 首行菜单 */
+        .infoLabel {
+            display: block;
+            width: 1080px;
+            height: 130px;
+            background-color: rgb(237, 237, 237);
+            font-family: "黑体";
+            line-height: 130px;
+            font-size: 45px;
+        }
+
+        .infoLabelBack {
+            /* 109px 65px */
+            float: left;
+            width: 109px;
+            height: 130px;
+            text-align: center;
+        }
+
+        .infoLabelText {
+            float: left;
+            width: 820px;
+            height: 130px;
+            text-align: left;
+        }
+
+        .infoLabelMore {
+            float: left;
+            width: 151px;
+            height: 130px;
+            text-align: center;
+        }
+
+        /* 主要部分 */
+        .mainDiv {
+            /* width=1080px */
+            width: 1016px;
+            height: auto;
+            padding-top: 39px;
+            padding-left: 32px;
+            padding-right: 32px;
+            font-family: "微软雅黑";
+            font-size: 38px;
+        }
+
+        /* 左半部分 */
+        .mainDivLeft {
+            float: left;
+            width: 140px;
+            height: auto;
+            margin-top: 3px;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+        }
+
+        .avatar>img {
+            width: 124px;
+            height: 124px;
+            margin-left: 8px;
+            margin-right: 8px;
+            border-radius: 10px;
+        }
+
+        /* 右半部分 */
+        .mainDivRight {
+            float: left;
+            width: 865px;
+            height: auto;
+            margin-left: 11px;
+        }
+
+        .nickName {
+            width: 865px;
+            height: 65px;
+            line-height: 65px;
+        }
+
+        .word {
+            /* width=865px */
+            width: 863px;
+            height: auto;
+            margin-top: 11px;
+            padding-top: 2px;
+        }
+
+        .word>p {
+            width: 865px;
+            /* fontSize=38 MarginTop/MarginBottomToFont=12 */
+            height: 62px;
+            line-height: 62px;
+            /* word-break: normal; */
+        }
+
+        .link {
+            /* width=865 height=167 */
+            width: 849px;
+            height: 151px;
+            margin-top: 32px;
+            padding: 8px;
+            background-color: rgb(247, 247, 247);
+        }
+
+        .linkPic {
+            float: left;
+            width: 151px;
+            height: 151px;
+        }
+
+        .linkPic>img {
+            width: 135px;
+            height: 135px;
+            padding: 8px;
+        }
+
+        .linkText {
+            float: left;
+            width: 682px;
+            height: 151px;
+            margin-left: 16px;
+        }
+
+        .linkText>p {
+            width: 682px;
+            height: 50px;
+            /* fontSize不确定，应该是36 */
+            font-size: 36px;
+            line-height: 51px;
+            /* 1行文字 */
+            /* margin-top: 50px; */
+            /* margin-bottom: 50px; */
+            /* 2行文字 */
+            margin-top: 24px;
+            margin-bottom: 25px;
+        }
+
+        .timeAndOption {
+            width: 865px;
+            height: 44px;
+            margin-top: 46px;
+            margin-bottom: 26px;
+        }
+
+        .time {
+            float: left;
+            width: 82px;
+            height: 44px;
+            font-size: 30px;
+            line-height: 44px;
+            text-align: center;
+            color: rgb(130, 130, 130);
+        }
+
+        .option {
+            float: left;
+            width: 64px;
+            height: 44px;
+            margin-left: 28px;
+            font-size: 30px;
+            line-height: 44px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="infoLabel">
+        <div class="infoLabelBack">&lt;</div>
+        <div class="infoLabelText">详情</div>
+        <div class="infoLabelMore">…</div>
+    </div>
+
+    <div class="mainDiv">
+        <div class="mainDivLeft">
+            <div class="avatar">
+                <!-- <img src="D:\OneDrive\Pictures_图片\WHITE KITTEN GIRL(tw) by SAZI\main@2x.png"> -->
+                <img src="./Ayano.jpg">
+            </div>
+        </div>
+        <div class="mainDivRight">
+            <div class="nickName operatonFontColor">rabbit2002</div>
+            <div class="word">
+                <p>咕咕咕咕咕咕</p>
+                <p>咕咕咕咕1咕</p>
+                <p class="operatonFontColor">12345678910</p>
+                <p>春秋雪夜</p>
+            </div>
+            <div class="link">
+                <div class="linkPic">
+                    <img src="http://qqadapt.qpic.cn/adapt/0/f86d7317-9560-a7ef-8326-96c1581da40d/">
+                </div>
+                <div class="linkText">
+                    <p>我完成了“青年大学习”网上主题团课第九季第二期，你也来试试吧</p>
+                </div>
+            </div>
+            <div class="timeAndOption">
+                <div class="time">02:21</div>
+                <div class="option operatonFontColor">删除</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
